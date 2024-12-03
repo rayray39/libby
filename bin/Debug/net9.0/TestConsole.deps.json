@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "TestConsole/1.0.0": {
+        "dependencies": {
+          "Pastel": "6.0.0"
+        },
+        "runtime": {
+          "TestConsole.dll": {}
+        }
+      },
+      "Pastel/6.0.0": {
+        "runtime": {
+          "lib/net9.0/Pastel.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pastel/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WVSscTHQwrImX+/cuvQ5wEzbsPHCWvIG+MPQ8QtL69BpMagz8nRROYz0G1RgUeQ7LCJNs7J0eUyEqMiuX2BydQ==",
+      "path": "pastel/6.0.0",
+      "hashPath": "pastel.6.0.0.nupkg.sha512"
+    }
+  }
+}

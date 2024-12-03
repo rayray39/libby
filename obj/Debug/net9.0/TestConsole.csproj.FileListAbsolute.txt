@@ -1,0 +1,17 @@
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\bin\Debug\net9.0\TestConsole.exe
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\bin\Debug\net9.0\TestConsole.deps.json
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\bin\Debug\net9.0\TestConsole.runtimeconfig.json
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\bin\Debug\net9.0\TestConsole.dll
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\bin\Debug\net9.0\TestConsole.pdb
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.AssemblyInfo.cs
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.dll
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\refint\TestConsole.dll
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.pdb
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.genruntimeconfig.cache
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\ref\TestConsole.dll
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\bin\Debug\net9.0\Pastel.dll
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestConsole.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive - National University of Singapore\Desktop\Personal Goals\fullstack\TestConsole\obj\Debug\net9.0\TestCons.AA59A120.Up2Date
