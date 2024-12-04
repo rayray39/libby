@@ -1,10 +1,15 @@
 class User
 {
-    private string name;    // name of user
+    public required string name;    // name of user
 
-    // property title
+    // property name, readonly
     public string Name
     {
         get { return name; }
+        set { name = value; }
+    }
+
+    public User(string name) {
+        Name = name;
     }
 }
