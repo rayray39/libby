@@ -5,7 +5,7 @@
 class Library
 {
     private static int sizeOfLibrary = 5;   // number of Books allowed to hold in Library
-    private List<Book> books = new List<Book>();     // initialised to empty list (zero items)
+    public List<Book> books = new List<Book>();     // initialised to empty list (zero items)
 
     // adds the book to the library
     public void addBook() {

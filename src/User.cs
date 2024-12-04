@@ -1,6 +1,6 @@
 class User
 {
-    public string name;    // name of user
+    // public string name;    // name of user
 
     // property name, readonly
     public string Name{ get; set; }
