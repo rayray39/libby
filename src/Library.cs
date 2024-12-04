@@ -10,18 +10,17 @@ class Library
 {
     private static int sizeOfLibrary = 5;   // number of Books allowed to hold in Library
     public List<Book> books = new List<Book>();     // initialised to empty list (zero items)
-    private FileStream createStream;    // file to save to (library.json)
+    private static string filePath = ".\\data";
+    private static string fileName = filePath + "\\library.json";
 
     public Library() {
-         // serialising the library data
-        string filePath = ".\\data";
-        string fileName = filePath + "\\library.json";
-
+         // checks if data directory exists, create it if not found.
         if (Directory.Exists(filePath)) {
             Console.WriteLine("the json file exists");
+            string jsonString = File.ReadAllText(fileName);
+            books = JsonSerializer.Deserialize<List<Book>>(jsonString)!;
         } else {
             DirectoryInfo di = Directory.CreateDirectory(filePath);
-            createStream = File.Create(fileName);
         }
     }
 
@@ -80,8 +79,10 @@ class Library
         }
     }
 
+    // serialize books list and saves it into file.
     public void save() {
         var options = new JsonSerializerOptions { WriteIndented = true };
-        JsonSerializer.Serialize(createStream, books, options);
+        string jsonString = JsonSerializer.Serialize(books, options);
+        File.WriteAllText(fileName, jsonString);
     }
 }
