@@ -3,50 +3,24 @@
 
 class Program
 {
-    private static bool isRunning = true;
     private static Library library = new Library();
-    private const string lineBreak = "----------------------";
-
     public static void Main(string[] args)
     {
         // main entry point of application
 
         Console.WriteLine("Welcome to fullstack library!");
-        Console.WriteLine("What would you like to do today?");
+        Console.WriteLine("Who would you like to login as?");
+        Console.WriteLine("[manager] - manages the library");
+        Console.WriteLine("[client] - use the library's services");
 
-        while (isRunning)
-        {
-            Console.WriteLine(lineBreak);
-            Console.WriteLine("[add] - add a book to the library");
-            Console.WriteLine("[remove] - remove a book from the library");
-            Console.WriteLine("[view] - view all books in the library");
-            Console.WriteLine("[search] - search for a book in the library");
-            Console.WriteLine("[exit] - exit the program");
-            Console.WriteLine(lineBreak + "\n");
+        string user = Console.ReadLine().Trim().ToLower();
 
-            string command = Console.ReadLine();
-
-            switch (command)
-            {
-                case "exit" : 
-                    isRunning = false;
-                    break;
-                case "add" :
-                    library.addBook();
-                    break;
-                case "remove" :
-                    library.removeBook();
-                    break;
-                case "search" :
-                    library.searchBook();
-                    break;
-                case "view" :
-                    library.viewLibrary();
-                    break;
-                default:
-                    Console.WriteLine("Please enter a valid command");
-                    break;
-            }
+        if (user == "manager") {
+            // logged in as manager
+            ManagerRunner.run(library);
+        } else if (user == "client") {
+            // logged in as client
+            ClientRunner.run(library);
         }
     }
 }
