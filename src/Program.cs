@@ -17,10 +17,14 @@ class Program
 
         if (user == "manager") {
             // logged in as manager
-            ManagerRunner.run(library);
+            // library for manager should have write and read access
+            ManagerRunner manager = new ManagerRunner(new Manager("Jane"));
+            manager.Run(library);
         } else if (user == "client") {
             // logged in as client
-            ClientRunner.run(library);
+            // library for client should only have read access.
+            ClientRunner client = new ClientRunner(new Client("Joe"));
+            client.Run(library);
         }
     }
 }

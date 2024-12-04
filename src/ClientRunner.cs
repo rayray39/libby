@@ -1,10 +1,12 @@
-class ClientRunner
+class ClientRunner : Runner
 {
-    private static bool isRunning = false;
-    private const string lineBreak = "----------------------";
+    public ClientRunner(User client) : base(client) {
+        
+    }
 
-    public static void run(Library library) {
+    public override void Run(Library library) {
         isRunning = true;
+        base.user.greet();
 
         while (isRunning) {
             Console.WriteLine(lineBreak);

@@ -1,10 +1,12 @@
-class ManagerRunner
+class ManagerRunner : Runner
 {
-    private static bool isRunning = false;
-    private const string lineBreak = "----------------------";
+    public ManagerRunner(User manager) : base(manager) {
+        
+    }
 
-    public static void run(Library library) {
+    public override void Run(Library library) {
         isRunning = true;
+        base.user.greet();
 
         while (isRunning) {
             Console.WriteLine(lineBreak);
