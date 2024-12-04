@@ -5,10 +5,10 @@ using System.Text.Json;
 
 class Program
 {
-    private static Library library = new Library();
     public static async Task Main(string[] args)
     {
         // main entry point of application
+        Library library = new Library();
 
         Console.WriteLine("Welcome to fullstack library!");
         Console.WriteLine("Who would you like to login as?");
@@ -29,17 +29,6 @@ class Program
             client.Run(library);
         }
 
-        // serialising the library data
-        string filePath = ".\\data_manager";
-        string fileName = filePath + "\\m_library.json";
-        if (Directory.Exists(filePath)) {
-            Console.WriteLine("the json file exists");
-        } else {
-            DirectoryInfo di = Directory.CreateDirectory(filePath);
-            await using FileStream createStream = File.Create(fileName);
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            await JsonSerializer.SerializeAsync(createStream, library.books, options);
-        }
-        
+        library.save();
     }
 }

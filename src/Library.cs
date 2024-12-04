@@ -1,11 +1,29 @@
 // represents a Library that contains,
 // Books
 
+// should read data from .\data\library.json and store into list of books.
+
+
+using System.Text.Json;
 
 class Library
 {
     private static int sizeOfLibrary = 5;   // number of Books allowed to hold in Library
     public List<Book> books = new List<Book>();     // initialised to empty list (zero items)
+    private FileStream createStream;    // file to save to (library.json)
+
+    public Library() {
+         // serialising the library data
+        string filePath = ".\\data";
+        string fileName = filePath + "\\library.json";
+
+        if (Directory.Exists(filePath)) {
+            Console.WriteLine("the json file exists");
+        } else {
+            DirectoryInfo di = Directory.CreateDirectory(filePath);
+            createStream = File.Create(fileName);
+        }
+    }
 
     // adds the book to the library
     public void addBook() {
@@ -60,5 +78,10 @@ class Library
         {
             Console.WriteLine(book.Title);
         }
+    }
+
+    public void save() {
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        JsonSerializer.Serialize(createStream, books, options);
     }
 }
