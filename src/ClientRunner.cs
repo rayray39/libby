@@ -12,6 +12,7 @@ class ClientRunner : Runner
             Console.WriteLine(lineBreak);
             Console.WriteLine("[view] - view all books in the library");
             Console.WriteLine("[search] - search for a book in the library");
+            Console.WriteLine("[checkout] - checkout/borrow a book");
             Console.WriteLine("[exit] - exit the program");
             Console.WriteLine(lineBreak + "\n");
 
@@ -27,6 +28,9 @@ class ClientRunner : Runner
                     break;
                 case "view" :
                     library.viewLibrary();
+                    break;
+                case "checkout" :
+                    library.checkout();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid command");

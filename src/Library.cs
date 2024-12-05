@@ -16,7 +16,6 @@ class Library
     public Library() {
          // checks if data directory exists, create it if not found.
         if (Directory.Exists(filePath)) {
-            Console.WriteLine("the json file exists");
             string jsonString = File.ReadAllText(fileName);
             books = JsonSerializer.Deserialize<List<Book>>(jsonString)!;
         } else {
@@ -84,5 +83,20 @@ class Library
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(books, options);
         File.WriteAllText(fileName, jsonString);
+    }
+
+    // allows client to borrow a book from library.
+    public void checkout() {
+        if (!books.Any()) {
+            // no books left to borrow
+            Console.WriteLine("* the library is empty *");
+            return;
+        }
+
+        Console.WriteLine("Enter the book you would like to borrow:");
+        string bookTitle = Console.ReadLine();
+        bookTitle = bookTitle.Trim();
+        int numberOfBooksRemoved = books.RemoveAll(book => book.Title == bookTitle);
+        Console.WriteLine("--- {0} book(s) have been checked out ---\n", numberOfBooksRemoved);
     }
 }
