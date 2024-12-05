@@ -10,7 +10,7 @@ class Program
         // main entry point of application
         Library library = new Library();
 
-        Console.WriteLine("Welcome to fullstack library!");
+        Console.WriteLine("\nWelcome to Libby!");
         Console.WriteLine("Who would you like to login as?");
         Console.WriteLine("[manager] - manages the library");
         Console.WriteLine("[client] - use the library's services");
